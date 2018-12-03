@@ -9,12 +9,16 @@ import tplAbout from './html/about.tpl.html'
 import tplContact from './html/contact.tpl.html'
 import tplAdmin from './html/admin.tpl.html'
 import tplAdminAuth from './html/admin_auth.tpl.html'
+import toggleNav from './js/toggle_nav'
 
 const d = document,
     main = d.querySelector('.Main'),
     footerYear = d.querySelector('.Footer-year')
 
 footerYear.textContent = new Date().getFullYear()
+
+// ejecuto la funcion toggleNav
+toggleNav()
 
 d.addEventListener('DOMContentLoaded', e => {
     main.innerHTML = tplHome
